@@ -14,8 +14,6 @@
 
 在画面中心绘制一个可配置的准心。
 
-### 参数
-
 | Param | 说明 |
 | --- | --- |
 | Red / Green / Blue | 准心的红、绿、蓝分量，均为 0 到 255 的整数。 |
@@ -24,3 +22,20 @@
 | Thickness | 线条粗细，单位为输出像素。实心圆不使用此项。 |
 | Center Gap | 十字或斜叉中心留空的长度，单位为输出像素；其他形状不使用此项。 |
 | Shape | 形状编号：0 十字、1 斜叉、2 实心圆、3 圆环、4 方框。 |
+
+## Clarity
+
+增强画面中间调的局部对比度（清晰度）。
+
+| Param | 说明 |
+| --- | --- |
+| Radius | 效果作用半径，可选 0、1、2、3、4；数值越大半径越大。 |
+| Offset | 对模糊半径的附加调整；数值越大半径越大。 |
+| Blend Mode | 清晰度遮罩叠加回原图时使用的混合模式：0 Soft Light 1 Overlay 2 Hard Light 3 Multiply 4 Vivid Light 5 Linear Light 6 Addition |
+| Blend If Dark | 低于该亮度的像素将被排除在效果之外，0 到 255 的整数；设为 50 可只作用于中间调。 |
+| Blend If Light | 高于该亮度的像素将被排除在效果之外，0 到 255 的整数；设为 205 可只作用于中间调。 |
+| View BlendIf Mask | 是否显示 BlendIf 所用的遮罩：0 关闭、1 开启；黑色区域不会被应用效果。 |
+| Strength | 效果的整体强度，0 到 1 的浮点数。 |
+| Dark Intensity | 暗部光晕的强度，0 到 1 的浮点数。 |
+| Light Intensity | 亮部光晕的强度，0 到 1 的浮点数。 |
+| View Mask | 是否显示生成效果所用的遮罩：0 关闭、1 开启 |
